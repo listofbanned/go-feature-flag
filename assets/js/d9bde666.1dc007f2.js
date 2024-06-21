@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkgo_feature_flag_website=self.webpackChunkgo_feature_flag_website||[]).push([[23812],{23346:e=>{e.exports=JSON.parse('{"label":"retrievers","permalink":"/blog/tags/retrievers","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);

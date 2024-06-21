@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkgo_feature_flag_website=self.webpackChunkgo_feature_flag_website||[]).push([[17322],{37040:e=>{e.exports=JSON.parse('{"label":"Open Feature","permalink":"/blog/tags/open-feature","allTagsPath":"/blog/tags","count":2,"unlisted":false}')}}]);
