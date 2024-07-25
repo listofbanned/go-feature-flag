@@ -4,10 +4,61 @@
         <title>GO Feature Flag Blog</title>
         <link>https://gofeatureflag.org/blog</link>
         <description>GO Feature Flag Blog</description>
-        <lastBuildDate>Wed, 13 Mar 2024 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 25 Jul 2024 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[GO Feature Flag: Now Powering Your Mobile App Experience]]></title>
+            <link>https://gofeatureflag.org/blog/2024/07/25/go-feature-flag-mobile-support</link>
+            <guid>https://gofeatureflag.org/blog/2024/07/25/go-feature-flag-mobile-support</guid>
+            <pubDate>Thu, 25 Jul 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[GO Feature Flag: Now Powering Your Mobile App Experience.]]></description>
+            <content:encoded><![CDATA[<p>We're thrilled to announce a major milestone for GO Feature Flag: <strong>full compatibility with mobile applications</strong>.
+That's right, you can now leverage the power of feature flags to optimize your iOS, Android, and React Native apps with unparalleled ease and flexibility.</p>
+<p><img decoding="async" loading="lazy" alt="GO Feature Flag: Now Powering Your Mobile App Experience" src="https://gofeatureflag.org/assets/images/mobile-support-bdc8b741188a4d89ecd5cf6382336690.png" width="1083" height="395" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="why-mobile-feature-flags-matter">Why Mobile Feature Flags Matter?<a class="hash-link" aria-label="Direct link to Why Mobile Feature Flags Matter?" title="Direct link to Why Mobile Feature Flags Matter?" href="https://gofeatureflag.org/blog/2024/07/25/go-feature-flag-mobile-support#why-mobile-feature-flags-matter">​</a></h2>
+<p>Mobile app development is a fast-paced world where agility is key. Traditional release cycles can be lengthy and risky. Feature flags provide a dynamic solution by allowing you to control feature visibility without redeploying your app.</p>
+<p><strong>This translates to:</strong></p>
+<ul>
+<li>Faster time-to-market: Experiment with new features and iterate quickly based on user feedback.</li>
+<li>Reduced risk: Gradually roll out features to minimize potential issues and impact.</li>
+<li>Enhanced control: Turn features on or off in real-time based on user segments or other criteria.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="how-go-feature-flag-delivers-for-mobile">How GO Feature Flag Delivers for Mobile<a class="hash-link" aria-label="Direct link to How GO Feature Flag Delivers for Mobile" title="Direct link to How GO Feature Flag Delivers for Mobile" href="https://gofeatureflag.org/blog/2024/07/25/go-feature-flag-mobile-support#how-go-feature-flag-delivers-for-mobile">​</a></h2>
+<p>To bring feature flags to mobile, we've fully embraced the OpenFeature standard.</p>
+<p><strong>This means:</strong></p>
+<ul>
+<li>Native support for <strong>iOS</strong> and <strong>Android</strong>: A provider for each platform ensures seamless integration with the OpenFeature SDKs in your mobile app's core.</li>
+<li><strong>React Native</strong> compatibility: With the usage of GO Feature Flag web provider and the OpenFeature React SDK you can now manage feature flags within your React Native app using familiar JavaScript syntax.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="diving-deeper-into-the-tech">Diving Deeper into the Tech<a class="hash-link" aria-label="Direct link to Diving Deeper into the Tech" title="Direct link to Diving Deeper into the Tech" href="https://gofeatureflag.org/blog/2024/07/25/go-feature-flag-mobile-support#diving-deeper-into-the-tech">​</a></h2>
+<p>When it comes to client side, on the 3 platforms we are using the OpenFeature static paradigm <em>(client side SDK)</em>. What does it means?
+The key distinction between the client- and server-side feature flagging is the difference in how often evaluation context changes.</p>
+<p>When on your mobile device, your evaluation context is changing very rarely since the device is linked to a user. Also, in the client, you expect a very low latency to get the value of your flag.
+Based on this idea, the GO Feature Flag providers will retrieve your set of flags and cache them on the device, so you can evaluate them without any network call.</p>
+<p>If you want to read more about the OpenFeature static paradigm, you can read this <a href="https://openfeature.dev/blog/catering-to-the-client-side" target="_blank" rel="noopener noreferrer">article from Pete Hodgson</a> in the OpenFeature blog.</p>
+<p>For those interested in the technical details, let's explore how this integration works in this sequence diagram:</p>
+<p><a href="https://mermaid.live/edit#pako:eNrFVdtO20AQ_ZXV9oEgGUV9aokqpBIuQhUKahBClV829thZsd5x1-tAivj3zl4cJyEE-tQ8Zcdnzpy57T7zDHPgI97A7xZ0BmdSlEZUqWb0q4WxMpO10JaJumaiYdc4kwrcSclMWIn6NRQLh5zUoAsQtjXApmc_vs3M8GQgNVtia5jCTCjHcvja3ce5nLCL6HyhRMluDC5kDubjNCUWxS6mn6DE0vE9LQOZgQotEEPg0HRguADjeBNPM2JXWloplGx8yi5Dl95Fnx57lHb-purATHxHJydIdA3Y7tPgchJdnEdnTWAhVOuDjVFbeLIxQyyIoh4xGQX9gcFbUBcsqP9-c8VuJtNbNsTCQD1cfB5GJxgWFLXZzrxOesexUIpZZCXQELi_c2DeiXUcua-jKIXUjfXfe0ksC5pCBMd6FBJYi1sHy1hk5LoeYo2n6dqjEGtGwOwhQLK50CVEpt1ZjD1aFo6XOiMbJpysQpatiSI9CYUDE4binlpEkJygOmcGqGzN3OuSlI7RNHWZk9uHdUmwfyr3VkGCEXTeFSXOyqrvLgCNkLPsmVQ_d-erum1PHnXxFFGB0HcEgUHKq-WRE5XyhBVCNbAaNBZ0UeaoFhC9eubBQfQ8ONxS7CDQs5DVy47mPdrHoQ203buHKOxrgYbBk6hqdw8V1lHQVJTk1V0L_YWwsXJxPQYaHs_fWa-VfQp78f9xx0jVm3v2wY3aOWdsc9Biw3jCKzCVkDk9Fs_OlHIirSDlhOMz0dC_ZM1-J4wUM0WbSYDnbuJTXhtZCbMco0ITfD9lUHyBr9E9oFyZTh_Kd1CR65byXkceHx9vwJTUsO87jRDdpZuaPCZAXlL9QumL1uJ0qTM-sqaFhLd1Tn2J7-Wm8TyXFg0f-X1KOPjjdXhow8VDfPRI_UKsViiDbTmPp5e_6kKEdw" target="_blank" rel="noopener noreferrer"><img decoding="async" loading="lazy" src="https://mermaid.ink/img/pako:eNrFVdtO20AQ_ZXV9oEgGUV9aokqpBIuQhUKahBClV829thZsd5x1-tAivj3zl4cJyEE-tQ8Zcdnzpy57T7zDHPgI97A7xZ0BmdSlEZUqWb0q4WxMpO10JaJumaiYdc4kwrcSclMWIn6NRQLh5zUoAsQtjXApmc_vs3M8GQgNVtia5jCTCjHcvja3ce5nLCL6HyhRMluDC5kDubjNCUWxS6mn6DE0vE9LQOZgQotEEPg0HRguADjeBNPM2JXWloplGx8yi5Dl95Fnx57lHb-purATHxHJydIdA3Y7tPgchJdnEdnTWAhVOuDjVFbeLIxQyyIoh4xGQX9gcFbUBcsqP9-c8VuJtNbNsTCQD1cfB5GJxgWFLXZzrxOesexUIpZZCXQELi_c2DeiXUcua-jKIXUjfXfe0ksC5pCBMd6FBJYi1sHy1hk5LoeYo2n6dqjEGtGwOwhQLK50CVEpt1ZjD1aFo6XOiMbJpysQpatiSI9CYUDE4binlpEkJygOmcGqGzN3OuSlI7RNHWZk9uHdUmwfyr3VkGCEXTeFSXOyqrvLgCNkLPsmVQ_d-erum1PHnXxFFGB0HcEgUHKq-WRE5XyhBVCNbAaNBZ0UeaoFhC9eubBQfQ8ONxS7CDQs5DVy47mPdrHoQ203buHKOxrgYbBk6hqdw8V1lHQVJTk1V0L_YWwsXJxPQYaHs_fWa-VfQp78f9xx0jVm3v2wY3aOWdsc9Biw3jCKzCVkDk9Fs_OlHIirSDlhOMz0dC_ZM1-J4wUM0WbSYDnbuJTXhtZCbMco0ITfD9lUHyBr9E9oFyZTh_Kd1CR65byXkceHx9vwJTUsO87jRDdpZuaPCZAXlL9QumL1uJ0qTM-sqaFhLd1Tn2J7-Wm8TyXFg0f-X1KOPjjdXhow8VDfPRI_UKsViiDbTmPp5e_6kKEdw?type=png" alt="" class="img_ev3q"></a></p>
+<p>As you can see, the provider is keeping all the flags in memory to serve them as fast as possible without any network call.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="how-to-integrate-go-feature-flag-into-your-mobile-app">How to integrate GO Feature Flag into your mobile app?<a class="hash-link" aria-label="Direct link to How to integrate GO Feature Flag into your mobile app?" title="Direct link to How to integrate GO Feature Flag into your mobile app?" href="https://gofeatureflag.org/blog/2024/07/25/go-feature-flag-mobile-support#how-to-integrate-go-feature-flag-into-your-mobile-app">​</a></h2>
+<p>Ready to supercharge your mobile app development with GO Feature Flag? Here's how to get started:</p>
+<ul>
+<li><a href="https://gofeatureflag.org/docs/openfeature_sdk/client_providers/openfeature_swift" target="_blank" rel="noopener noreferrer">Integrate the OpenFeature SDK into your iOS project</a></li>
+<li><a href="https://gofeatureflag.org/docs/openfeature_sdk/client_providers/openfeature_android" target="_blank" rel="noopener noreferrer">Integrate the OpenFeature SDK into your Android project</a></li>
+<li><a href="https://gofeatureflag.org/docs/openfeature_sdk/client_providers/openfeature_react" target="_blank" rel="noopener noreferrer">Integrate the OpenFeature SDK into your React Native project</a></li>
+</ul>
+<p>Our comprehensive documentation provides detailed instructions and examples to guide you through the process.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-future-of-feature-flags">The Future of Feature Flags<a class="hash-link" aria-label="Direct link to The Future of Feature Flags" title="Direct link to The Future of Feature Flags" href="https://gofeatureflag.org/blog/2024/07/25/go-feature-flag-mobile-support#the-future-of-feature-flags">​</a></h2>
+<p>We're excited about the potential of feature flags to transform mobile app development. With GO Feature Flag's expanded support, we're empowering developers to build better, faster, and more reliable apps.</p>
+<p>Stay tuned for future updates as we continue to enhance our platform and explore new possibilities.</p>
+<p>Do you have already integrate GO Feature Flag in your mobile app? Let us know your experience in our <a href="http://gofeatureflag.org/slack" target="_blank" rel="noopener noreferrer">Slack channel</a> or on <a href="https://x.com/gofeatureflag" target="_blank" rel="noopener noreferrer">X</a>.</p>]]></content:encoded>
+            <category>openfeature</category>
+            <category>mobile</category>
+            <category>ios</category>
+            <category>android</category>
+            <category>react-native</category>
+        </item>
         <item>
             <title><![CDATA[GO Feature Flag Supports OpenFeature Remote Evaluation Protocol (OFREP)!]]></title>
             <link>https://gofeatureflag.org/blog/2024/03/13/ofrep</link>
