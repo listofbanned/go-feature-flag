@@ -2,11 +2,38 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gofeatureflag.org/blog</id>
     <title>GO Feature Flag Blog</title>
-    <updated>2024-07-25T00:00:00.000Z</updated>
+    <updated>2024-08-02T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gofeatureflag.org/blog"/>
     <subtitle>GO Feature Flag Blog</subtitle>
     <icon>https://gofeatureflag.org/img/favicon/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[Feature Flagging in the SDLC]]></title>
+        <id>https://gofeatureflag.org/blog/2024/08/02/feature-flagging-in-the-SDLC</id>
+        <link href="https://gofeatureflag.org/blog/2024/08/02/feature-flagging-in-the-SDLC"/>
+        <updated>2024-08-02T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Feature Flagging in the Software Development Lifecycle - Follow the life of a feature flag from birth to retirement.]]></summary>
+        <content type="html"><![CDATA[<p><strong>Thomas</strong> recently delivered a presentation on Feature Flagging in the Software Development Lifecycle (SDLC) for OpenFeature. Given the presentation's public availability, we are pleased to share the slides with you.</p>
+<p>Effective management of the feature flag lifecycle is crucial for maximizing the value of feature flags within an organization.</p>
+<p>This presentation is covering the following key areas:</p>
+<ul>
+<li><strong>Feature flag lifecycle:</strong> Understanding the complete journey of a feature flag.</li>
+<li><strong>Roles and responsibilities:</strong> Identifying who owns each phase of the lifecycle.</li>
+<li><strong>Feature flag naming conventions:</strong> Best practices for clear and consistent flag identification.</li>
+<li><strong>Preventing flag debt:</strong> Strategies for avoiding the accumulation of unused or obsolete flags.</li>
+<li><strong>Involving project managers:</strong> The importance of project management collaboration in feature flag initiatives.</li>
+</ul>
+<p>By understanding these concepts, you can optimize your feature flagging strategy and drive business success.</p>
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSt-lZkiFpntGRWB-FZ0IFMFZlWrd6kk1tjjNrh1r4oDn19C32-lFGq4qxFZbfQmaSf6MUnTZJyAtsT/embed?start=false&amp;loop=false&amp;delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>]]></content>
+        <author>
+            <name>Thomas Poignant</name>
+            <uri>https://github.com/thomaspoignant</uri>
+        </author>
+        <category label="openfeature" term="openfeature"/>
+        <category label="SDLC" term="SDLC"/>
+        <category label="Slides" term="Slides"/>
+        <category label="Presentation" term="Presentation"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[GO Feature Flag: Now Powering Your Mobile App Experience]]></title>
         <id>https://gofeatureflag.org/blog/2024/07/25/go-feature-flag-mobile-support</id>
@@ -316,7 +343,7 @@ This can be done by adding the <code>apiKey</code> like this:</p>
 <p>One of the most important best practices for feature flags is to keep them <strong>simple</strong> and <strong>scoped</strong>.</p>
 <p>This means avoiding overly complex flags that do too much, and instead using small, targeted flags that can be easily managed and maintained.
 Keeping flags simple and scoped helps to avoid confusion and reduces the risk of bugs or other issues.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-avoid-using-flags-as-a-long-term-solution">⏰ Avoid using flags as a long-term solution<a class="hash-link" aria-label="Direct link to ⏰ Avoid using flags as a long-term solution" title="Direct link to ⏰ Avoid using flags as a long-term solution" href="https://gofeatureflag.org/blog/feature-flag-best-practice#-avoid-using-flags-as-a-long-term-solution">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-avoid-using-flags-as-a-long-term-solution">⏰ Avoid using flags as a long-term solution<a class="hash-link" aria-label="Direct link to �⏰ Avoid using flags as a long-term solution" title="Direct link to ⏰ Avoid using flags as a long-term solution" href="https://gofeatureflag.org/blog/feature-flag-best-practice#-avoid-using-flags-as-a-long-term-solution">​</a></h2>
 <p>Another important best practice is to avoid using feature flags as a long-term solution.</p>
 <p>Feature flags should be used as a temporary measure to test new features or functionality, and then removed once the feature is fully tested and released.</p>
 <p>Leaving flags in place for too long can lead to code bloat and confusion, making it harder to maintain and update your codebase.</p>
