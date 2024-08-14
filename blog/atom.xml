@@ -2,11 +2,58 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gofeatureflag.org/blog</id>
     <title>GO Feature Flag Blog</title>
-    <updated>2024-08-02T00:00:00.000Z</updated>
+    <updated>2024-08-14T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gofeatureflag.org/blog"/>
     <subtitle>GO Feature Flag Blog</subtitle>
     <icon>https://gofeatureflag.org/img/favicon/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[Changes to golang OpenFeature Integration]]></title>
+        <id>https://gofeatureflag.org/blog/2024/08/14/changes-to-golang-openfeature-integration</id>
+        <link href="https://gofeatureflag.org/blog/2024/08/14/changes-to-golang-openfeature-integration"/>
+        <updated>2024-08-14T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[We have released 2 new golang providers for OpenFeature, let's explain all the changes.]]></summary>
+        <content type="html"><![CDATA[<p><img decoding="async" loading="lazy" alt="blog_cover.png" src="https://gofeatureflag.org/assets/images/blog_cover-551c6a50d204cc3316f7a43ae59625e3.png" width="1083" height="323" class="img_ev3q">
+We're excited to announce significant improvements to the integration between GO Feature Flag and OpenFeature.</p>
+<p>To better serve our users' diverse needs, we've decided to split the previous Go provider into two distinct providers:</p>
+<ul>
+<li><a href="https://github.com/open-feature/go-sdk-contrib/tree/main/providers/go-feature-flag" target="_blank" rel="noopener noreferrer"><code>go-feature-flag</code></a>: For use with the GO Feature Flag relay proxy.</li>
+<li><a href="https://github.com/open-feature/go-sdk-contrib/tree/main/providers/go-feature-flag-in-process" target="_blank" rel="noopener noreferrer"><code>go-feature-flag-in-process</code></a>: For direct integration of GO Feature Flag into your application.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="why-the-split">Why the Split?<a class="hash-link" aria-label="Direct link to Why the Split?" title="Direct link to Why the Split?" href="https://gofeatureflag.org/blog/2024/08/14/changes-to-golang-openfeature-integration#why-the-split">​</a></h2>
+<p>The decision to create separate providers was driven by several factors:</p>
+<ul>
+<li><strong>Distinct Use Cases:</strong> It's uncommon for users to require both the relay proxy and in-process capabilities simultaneously.</li>
+<li><strong>Dependency Management:</strong> The in-process provider introduces additional dependencies, which can complicate integration.</li>
+<li><strong>Maintainability:</strong> Managing two distinct functionalities within a single provider proved challenging.</li>
+</ul>
+<p>By separating these functionalities, we've streamlined the integration process and enhanced overall maintainability.</p>
+<p>We also use this split to rewrite from scratch the provider to increase the quality of the OpenFeature integration.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="choosing-the-right-provider">Choosing the Right Provider<a class="hash-link" aria-label="Direct link to Choosing the Right Provider" title="Direct link to Choosing the Right Provider" href="https://gofeatureflag.org/blog/2024/08/14/changes-to-golang-openfeature-integration#choosing-the-right-provider">​</a></h2>
+<p>To select the appropriate provider for your application, consider the following:</p>
+<ul>
+<li><a href="https://github.com/open-feature/go-sdk-contrib/tree/main/providers/go-feature-flag" target="_blank" rel="noopener noreferrer"><code>go-feature-flag</code></a>: Ideal for multi-language environments using the GO Feature Flag relay proxy. This provider offers a lightweight integration with minimal dependencies, ensuring consistency with other language-specific providers.</li>
+<li><a href="https://github.com/open-feature/go-sdk-contrib/tree/main/providers/go-feature-flag-in-process" target="_blank" rel="noopener noreferrer"><code>go-feature-flag-in-process</code></a>: Best suited for Go-only applications that prefer a direct integration without the overhead of a separate service.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="breaking-changes">Breaking Changes<a class="hash-link" aria-label="Direct link to Breaking Changes" title="Direct link to Breaking Changes" href="https://gofeatureflag.org/blog/2024/08/14/changes-to-golang-openfeature-integration#breaking-changes">​</a></h2>
+<p>As you may imagine, this split comes with some breaking changes, but we've done everything possible to limit it as much as possible.
+Please be aware of the following breaking changes:</p>
+<ul>
+<li><strong>Existing go-feature-flag users:</strong> If you were previously using the <code>go-feature-flag</code> provider with the Go module, you'll need to transition to the <code>go-feature-flag-in-process</code> provider.</li>
+<li><strong>Configuration Changes:</strong> The <code>HTTPClient</code> interface has been removed from the configuration in favor of using the standard <code>http.Client</code> <em>(This should have no impact on the way to pass the http client in the options)</em>.</li>
+<li><strong>Cache Compatibility:</strong> If you are using the in-memory cache of the provider, ensure your relay proxy is updated to version <code>1.32.0</code> or later, if not the cache will not work as expected and you may have an increase on the number of connection to the relay-proxy.</li>
+</ul>
+<p>We understand that these changes may require adjustments to your existing setup. We recommend carefully reviewing the updated documentation for both providers to ensure a smooth transition.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="next-steps">Next Steps<a class="hash-link" aria-label="Direct link to Next Steps" title="Direct link to Next Steps" href="https://gofeatureflag.org/blog/2024/08/14/changes-to-golang-openfeature-integration#next-steps">​</a></h2>
+<p>We encourage you to explore the new providers and leverage the enhanced features they offer. If you encounter any issues or have feedback, please don't hesitate to <a href="https://github.com/thomaspoignant/go-feature-flag/issues/new/choose" target="_blank" rel="noopener noreferrer">open an issue</a>.</p>
+<p>We're committed to providing you with the best possible feature flagging experience.</p>]]></content>
+        <author>
+            <name>Thomas Poignant</name>
+            <uri>https://github.com/thomaspoignant</uri>
+        </author>
+        <category label="openfeature" term="openfeature"/>
+        <category label="golang" term="golang"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Feature Flagging in the SDLC]]></title>
         <id>https://gofeatureflag.org/blog/2024/08/02/feature-flagging-in-the-SDLC</id>
@@ -343,7 +390,7 @@ This can be done by adding the <code>apiKey</code> like this:</p>
 <p>One of the most important best practices for feature flags is to keep them <strong>simple</strong> and <strong>scoped</strong>.</p>
 <p>This means avoiding overly complex flags that do too much, and instead using small, targeted flags that can be easily managed and maintained.
 Keeping flags simple and scoped helps to avoid confusion and reduces the risk of bugs or other issues.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-avoid-using-flags-as-a-long-term-solution">⏰ Avoid using flags as a long-term solution<a class="hash-link" aria-label="Direct link to �⏰ Avoid using flags as a long-term solution" title="Direct link to ⏰ Avoid using flags as a long-term solution" href="https://gofeatureflag.org/blog/feature-flag-best-practice#-avoid-using-flags-as-a-long-term-solution">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-avoid-using-flags-as-a-long-term-solution">⏰ Avoid using flags as a long-term solution<a class="hash-link" aria-label="Direct link to ⏰ Avoid using flags as a long-term solution" title="Direct link to ⏰ Avoid using flags as a long-term solution" href="https://gofeatureflag.org/blog/feature-flag-best-practice#-avoid-using-flags-as-a-long-term-solution">​</a></h2>
 <p>Another important best practice is to avoid using feature flags as a long-term solution.</p>
 <p>Feature flags should be used as a temporary measure to test new features or functionality, and then removed once the feature is fully tested and released.</p>
 <p>Leaving flags in place for too long can lead to code bloat and confusion, making it harder to maintain and update your codebase.</p>
