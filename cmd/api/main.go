@@ -4,8 +4,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/labstack/echo/v4/middleware"
-	custommiddleware "github.com/thomaspoignant/go-feature-flag/cmd/relayproxy/api/middleware"
-	"github.com/thomaspoignant/go-feature-flag/cmd/relayproxy/log"
 	"github.com/thomaspoignant/go-feature-flag/internal/dto"
 	"github.com/thomaspoignant/go-feature-flag/testutils/testconvert"
 	"net/http"
@@ -76,9 +74,6 @@ func main() {
 	featureFlags = initFeatureFlag2()
 
 	e := echo.New()
-	zapLog := log.InitLogger()
-	defer func() { _ = zapLog.Sync() }()
-	e.Use(custommiddleware.ZapLogger(zapLog, nil))
 	e.Use(middleware.CORSWithConfig(middleware.DefaultCORSConfig))
 	// Routes
 	e.GET("/v1/flags", getAllFeatureFlags)
