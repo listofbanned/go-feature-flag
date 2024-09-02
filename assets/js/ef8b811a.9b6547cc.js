@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkgo_feature_flag_website=self.webpackChunkgo_feature_flag_website||[]).push([[62644],{89441:t=>{t.exports=JSON.parse('{"authors":[{"name":"Thomas Poignant","title":"Creator of GO Feature Flag","url":"https://github.com/thomaspoignant","imageURL":"https://github.com/thomaspoignant.png","key":"thomaspoignant","page":null,"count":15}]}')}}]);
