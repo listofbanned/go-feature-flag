@@ -1,0 +1,38 @@
+app-enable-query-builder:
+    variations:
+        disabled: false
+        enabled: true
+    targeting:
+        - query: targetingKey eq "28d977e9-c32b-45c9-8ef9-e6076d53efa6"
+          variation: enabled
+    defaultRule:
+        variation: disabled
+    metadata:
+        titi: 4
+        toto: tata
+app-enable-rollout-tab:
+    variations:
+        disabled: 2
+        varA: 1
+    targeting:
+        - query: targetingKey eq "28d977e9-c32b-45c9-8ef9-e6076d53efa6"
+          percentage:
+            disabled: 50
+            varA: 50
+    defaultRule:
+        percentage:
+            disabled: 50
+            varA: 50
+my-new-flag:
+    variations:
+        disabled: false
+        enabled: true
+    targeting:
+        - query: targetingKey eq "28d977e9-c32b-45c9-8ef9-e6076d53efa6"
+          variation: enabled
+    defaultRule:
+        variation: disabled
+    metadata:
+        my-super-new-metadata: 1.239
+        titi: 4
+        toto: tata
