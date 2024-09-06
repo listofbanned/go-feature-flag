@@ -6,6 +6,7 @@ import (
 	"github.com/thomaspoignant/go-feature-flag/internal/dto"
 	"gopkg.in/yaml.v3"
 	"os"
+	"time"
 )
 
 type dataFlagImpl struct {
@@ -96,11 +97,41 @@ func (d *dataFlagImpl) loadFlags() ([]model.FeatureFlag, error) {
 
 	featureFlags := make([]model.FeatureFlag, 0)
 	for name, flag := range flags {
-		featureFlags = append(featureFlags, model.FeatureFlag{
+		loadedFlag := model.FeatureFlag{
 			DTO:  flag,
 			Name: name,
-			ID:   name,
-		})
+		}
+
+		if flag.Metadata != nil {
+			metadata := *flag.Metadata
+
+			if metadata["gofeatureflag_id"] != nil {
+				loadedFlag.ID = metadata["gofeatureflag_id"].(string)
+				delete(metadata, "gofeatureflag_id")
+			} else {
+				// default to avoid failing
+				loadedFlag.ID = name
+			}
+
+			if metadata["gofeatureflag_createdDate"] != nil {
+				loadedFlag.CreatedDate = metadata["gofeatureflag_createdDate"].(time.Time)
+				delete(metadata, "gofeatureflag_createdDate")
+			}
+
+			if metadata["gofeatureflag_lastUpdatedDate"] != nil {
+				loadedFlag.LastUpdatedDate = metadata["gofeatureflag_lastUpdatedDate"].(time.Time)
+				delete(metadata, "gofeatureflag_lastUpdatedDate")
+			}
+
+			if metadata["gofeatureflag_description"] != nil {
+				loadedFlag.Description = metadata["gofeatureflag_description"].(string)
+				delete(metadata, "gofeatureflag_description")
+			}
+
+			loadedFlag.Metadata = &metadata
+		}
+
+		featureFlags = append(featureFlags, loadedFlag)
 	}
 	return featureFlags, nil
 }
@@ -108,6 +139,18 @@ func (d *dataFlagImpl) loadFlags() ([]model.FeatureFlag, error) {
 func (d *dataFlagImpl) saveFlags(flags []model.FeatureFlag) error {
 	var mapFlags = make(map[string]dto.DTO)
 	for _, flag := range flags {
+
+		// Save extra info in metadata
+		metadata := *flag.Metadata
+		if metadata == nil {
+			metadata = make(map[string]interface{})
+		}
+		metadata["gofeatureflag_id"] = flag.ID
+		metadata["gofeatureflag_createdDate"] = flag.CreatedDate
+		metadata["gofeatureflag_lastUpdatedDate"] = flag.LastUpdatedDate
+		metadata["gofeatureflag_description"] = flag.Description
+		flag.DTO.Metadata = &metadata
+
 		mapFlags[flag.Name] = flag.DTO
 	}
 

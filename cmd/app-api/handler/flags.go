@@ -5,6 +5,7 @@ import (
 	"github.com/thomaspoignant/go-feature-flag/cmd/app-api/dao"
 	"github.com/thomaspoignant/go-feature-flag/cmd/app-api/model"
 	"net/http"
+	"time"
 )
 
 type Flags struct {
@@ -36,6 +37,9 @@ func (f Flags) CreateNewFlag(c echo.Context) error {
 	if err := c.Bind(&flag); err != nil {
 		return c.JSON(http.StatusBadRequest, map[string]string{"error": err.Error()})
 	}
+
+	flag.CreatedDate = time.Now()
+
 	id, err := f.dao.CreateFlag(flag)
 	if err != nil {
 		return c.JSON(http.StatusInternalServerError, map[string]string{"error": err.Error()})
@@ -60,6 +64,8 @@ func (f Flags) UpdateFlagByID(c echo.Context) error {
 	if flag.ID == "" {
 		flag.ID = c.Param("id")
 	}
+
+	flag.LastUpdatedDate = time.Now()
 
 	err = f.dao.UpdateFlag(flag)
 	if err != nil {
@@ -93,6 +99,7 @@ func (f Flags) UpdateFeatureFlagStatus(c echo.Context) error {
 	}
 
 	flag.Disable = &statusUpdate.Disable
+	flag.LastUpdatedDate = time.Now()
 	err = f.dao.UpdateFlag(flag)
 	if err != nil {
 		return c.JSON(http.StatusInternalServerError, map[string]string{"error": err.Error()})

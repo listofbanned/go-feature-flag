@@ -8,8 +8,15 @@ app-enable-query-builder:
     defaultRule:
         variation: disabled
     metadata:
+        gofeatureflag_createdDate: 0001-01-01T00:00:00Z
+        gofeatureflag_description: |
+            This is a feature flag for the query builder
+            It is used to enable or disable the query builder feature
+        gofeatureflag_id: 586ee7cc-7f13-40c6-81ca-d72bd2865473
+        gofeatureflag_lastUpdatedDate: 2024-09-06T09:06:27.130324+02:00
         titi: 4
         toto: tata
+    disable: false
 app-enable-rollout-tab:
     variations:
         disabled: 2
@@ -23,16 +30,9 @@ app-enable-rollout-tab:
         percentage:
             disabled: 50
             varA: 50
-my-new-flag:
-    variations:
-        disabled: false
-        enabled: true
-    targeting:
-        - query: targetingKey eq "28d977e9-c32b-45c9-8ef9-e6076d53efa6"
-          variation: enabled
-    defaultRule:
-        variation: disabled
     metadata:
-        my-super-new-metadata: 1.239
-        titi: 4
-        toto: tata
+        gofeatureflag_createdDate: 0001-01-01T00:00:00Z
+        gofeatureflag_description: ""
+        gofeatureflag_id: b53c9a5f-eb1f-447b-b2c9-5831cccd8df3
+        gofeatureflag_lastUpdatedDate: 2024-09-06T09:06:46.736617+02:00
+    disable: false
