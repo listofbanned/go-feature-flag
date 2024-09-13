@@ -1,38 +1,71 @@
 app-enable-query-builder:
     variations:
-        disabled: false
-        enabled: true
-    targeting:
-        - query: targetingKey eq "28d977e9-c32b-45c9-8ef9-e6076d53efa6"
-          variation: enabled
+        B233: feslhds
+        enabledddd: giefohdho
+    targeting: []
     defaultRule:
-        variation: disabled
-    metadata:
-        gofeatureflag_createdDate: 0001-01-01T00:00:00Z
-        gofeatureflag_description: |
-            This is a feature flag for the query builder
-            It is used to enable or disable the query builder feature
-        gofeatureflag_id: 586ee7cc-7f13-40c6-81ca-d72bd2865473
-        gofeatureflag_lastUpdatedDate: 2024-09-06T09:06:27.130324+02:00
-        titi: 4
-        toto: tata
-    disable: false
-app-enable-rollout-tab:
-    variations:
-        disabled: 2
-        varA: 1
-    targeting:
-        - query: targetingKey eq "28d977e9-c32b-45c9-8ef9-e6076d53efa6"
-          percentage:
-            disabled: 50
-            varA: 50
-    defaultRule:
-        percentage:
-            disabled: 50
-            varA: 50
+        name: defaultRule
+        progressiveRollout:
+            initial:
+                variation: B233
+                percentage: 0
+                date: 2024-09-12T21:08:42.915Z
+            end:
+                variation: enabledddd
+                percentage: 100
+                date: 2024-09-13T21:08:42.915Z
+        disable: false
     metadata:
         gofeatureflag_createdDate: 0001-01-01T00:00:00Z
         gofeatureflag_description: ""
-        gofeatureflag_id: b53c9a5f-eb1f-447b-b2c9-5831cccd8df3
-        gofeatureflag_lastUpdatedDate: 2024-09-06T09:06:46.736617+02:00
+        gofeatureflag_id: 28d977e9-c32b-45c9-8ef9-e6076d53efa6
+        gofeatureflag_lastUpdatedDate: 2024-09-12T23:09:09.131698+02:00
+        titi: "4"
+        toto: tata
+    trackEvents: false
     disable: false
+    version: ""
+app-enable-rollout-tab:
+    variations:
+        clohjsl: 6
+        varA: 1
+        yoyo: 2
+    targeting:
+        - name: ""
+          query: targetingKey eq "28d977e9-c32b-45c9-8ef9-e6076d53efa6"
+          variation: yoyo
+          disable: false
+    defaultRule:
+        name: defaultRule
+        variation: yoyo
+        disable: false
+    metadata:
+        gofeatureflag_createdDate: 0001-01-01T00:00:00Z
+        gofeatureflag_description: ""
+        gofeatureflag_id: 28d977e9-c32b-45c9-8ef9-e6076d53efa7
+        gofeatureflag_lastUpdatedDate: 2024-09-12T23:10:21.210268+02:00
+        titi: "4"
+        toto: tata
+    trackEvents: false
+    disable: false
+    version: ""
+otot:
+    variations:
+        variation-A: fdsl
+        variation-B13sss: vefsldoj
+    targeting:
+        - name: Rule 1
+          query: lvsjhvls
+          variation: variation-B13sss
+          disable: false
+    defaultRule:
+        name: defaultRule
+        disable: false
+    metadata:
+        gofeatureflag_createdDate: 2024-09-12T20:27:42.276Z
+        gofeatureflag_description: ""
+        gofeatureflag_id: 941e8082-57c1-4c0b-843a-c47530c4d4cf
+        gofeatureflag_lastUpdatedDate: 2024-09-12T22:34:07.956589+02:00
+    trackEvents: false
+    disable: false
+    version: 0.0.1

@@ -39,7 +39,6 @@ func (f Flags) CreateNewFlag(c echo.Context) error {
 	}
 
 	flag.CreatedDate = time.Now()
-
 	id, err := f.dao.CreateFlag(flag)
 	if err != nil {
 		return c.JSON(http.StatusInternalServerError, map[string]string{"error": err.Error()})
@@ -105,5 +104,5 @@ func (f Flags) UpdateFeatureFlagStatus(c echo.Context) error {
 		return c.JSON(http.StatusInternalServerError, map[string]string{"error": err.Error()})
 	}
 
-	return c.JSON(http.StatusOK, nil)
+	return c.JSON(http.StatusOK, flag)
 }

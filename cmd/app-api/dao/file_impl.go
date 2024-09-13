@@ -50,7 +50,7 @@ func (d *dataFlagImpl) CreateFlag(flag model.FeatureFlag) (string, error) {
 	if err != nil {
 		return "", err
 	}
-	return flag.Name, nil
+	return flag.ID, nil
 }
 
 func (d *dataFlagImpl) UpdateFlag(flag model.FeatureFlag) error {
@@ -98,13 +98,17 @@ func (d *dataFlagImpl) loadFlags() ([]model.FeatureFlag, error) {
 	featureFlags := make([]model.FeatureFlag, 0)
 	for name, flag := range flags {
 		loadedFlag := model.FeatureFlag{
-			DTO:  flag,
+			DTO: dto.DTO{
+				DTOv1:       flag.DTOv1,
+				TrackEvents: flag.TrackEvents,
+				Disable:     flag.Disable,
+				Version:     flag.Version,
+			},
 			Name: name,
 		}
 
 		if flag.Metadata != nil {
 			metadata := *flag.Metadata
-
 			if metadata["gofeatureflag_id"] != nil {
 				loadedFlag.ID = metadata["gofeatureflag_id"].(string)
 				delete(metadata, "gofeatureflag_id")
@@ -131,8 +135,35 @@ func (d *dataFlagImpl) loadFlags() ([]model.FeatureFlag, error) {
 			loadedFlag.Metadata = &metadata
 		}
 
+		if flag.Variations != nil {
+			m := *flag.Variations
+			values := make([]interface{}, 0, len(m))
+			for _, value := range m {
+				values = append(values, *value)
+			}
+			firstValue := values[0]
+			switch firstValue.(type) {
+			case bool:
+				loadedFlag.VariationType = model.FlagTypeBoolean
+				break
+			case string:
+				loadedFlag.VariationType = model.FlagTypeString
+				break
+			case int, int32, int64:
+				loadedFlag.VariationType = model.FlagTypeInteger
+				break
+			case float64:
+				loadedFlag.VariationType = model.FlagTypeDouble
+				break
+			default:
+				loadedFlag.VariationType = model.FlagTypeJSON
+				break
+			}
+		}
 		featureFlags = append(featureFlags, loadedFlag)
+
 	}
+
 	return featureFlags, nil
 }
 
