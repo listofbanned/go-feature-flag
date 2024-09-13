@@ -41,14 +41,31 @@ app-enable-rollout-tab:
         disable: false
     metadata:
         gofeatureflag_createdDate: 0001-01-01T00:00:00Z
-        gofeatureflag_description: ""
+        gofeatureflag_description: vrgksugheakh cflwihqdexlh erfvwkugcsd
         gofeatureflag_id: 28d977e9-c32b-45c9-8ef9-e6076d53efa7
-        gofeatureflag_lastUpdatedDate: 2024-09-12T23:10:21.210268+02:00
+        gofeatureflag_lastUpdatedDate: 2024-09-13T17:30:49.117166+02:00
         titi: "4"
         toto: tata
     trackEvents: false
     disable: false
     version: ""
+gtfrds:
+    variations:
+        variation-A: '{}'
+        variation-B: '{}'
+    targeting: []
+    defaultRule:
+        name: defaultRule
+        variation: variation-A
+        disable: false
+    metadata:
+        gofeatureflag_createdDate: 2024-09-13T17:45:11.78432+02:00
+        gofeatureflag_description: ""
+        gofeatureflag_id: 7181e407-bd1c-436c-aff1-a2b9e3de8fde
+        gofeatureflag_lastUpdatedDate: 2024-09-13T15:44:57.875Z
+    trackEvents: false
+    disable: false
+    version: 0.0.1
 otot:
     variations:
         variation-A: fdsl
@@ -66,6 +83,23 @@ otot:
         gofeatureflag_description: ""
         gofeatureflag_id: 941e8082-57c1-4c0b-843a-c47530c4d4cf
         gofeatureflag_lastUpdatedDate: 2024-09-12T22:34:07.956589+02:00
+    trackEvents: false
+    disable: false
+    version: 0.0.1
+tgbadfr:
+    variations:
+        variation-A: 1.1
+        variation-B: 1.1
+    targeting: []
+    defaultRule:
+        name: defaultRule
+        variation: variation-A
+        disable: false
+    metadata:
+        gofeatureflag_createdDate: 2024-09-13T17:45:31.823125+02:00
+        gofeatureflag_description: ""
+        gofeatureflag_id: 67a4885e-dd74-4a55-b1f9-d8a0ff4350ce
+        gofeatureflag_lastUpdatedDate: 2024-09-13T15:45:27.887Z
     trackEvents: false
     disable: false
     version: 0.0.1
