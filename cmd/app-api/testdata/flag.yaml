@@ -19,7 +19,7 @@ app-enable-query-builder:
         gofeatureflag_createdDate: 0001-01-01T00:00:00Z
         gofeatureflag_description: ""
         gofeatureflag_id: 28d977e9-c32b-45c9-8ef9-e6076d53efa6
-        gofeatureflag_lastUpdatedDate: 2024-09-12T23:09:09.131698+02:00
+        gofeatureflag_lastUpdatedDate: 2024-09-16T14:26:55.382108+02:00
         titi: "4"
         toto: tata
     trackEvents: false
@@ -31,75 +31,45 @@ app-enable-rollout-tab:
         varA: 1
         yoyo: 2
     targeting:
-        - name: ""
+        - name: I need a rule name here
           query: targetingKey eq "28d977e9-c32b-45c9-8ef9-e6076d53efa6"
-          variation: yoyo
+          percentage:
+            clohjsl: 10
+            varA: 20
+            yoyo: 70
           disable: false
     defaultRule:
         name: defaultRule
-        variation: yoyo
+        variation: varA
         disable: false
     metadata:
         gofeatureflag_createdDate: 0001-01-01T00:00:00Z
         gofeatureflag_description: vrgksugheakh cflwihqdexlh erfvwkugcsd
         gofeatureflag_id: 28d977e9-c32b-45c9-8ef9-e6076d53efa7
-        gofeatureflag_lastUpdatedDate: 2024-09-13T17:30:49.117166+02:00
+        gofeatureflag_lastUpdatedDate: 2024-09-16T17:21:11.154283+02:00
         titi: "4"
         toto: tata
     trackEvents: false
     disable: false
     version: ""
-gtfrds:
+my-new-flag-a-moi:
     variations:
-        variation-A: '{}'
-        variation-B: '{}'
+        ghfds: true
+        vfdvdfscs: false
     targeting: []
     defaultRule:
         name: defaultRule
-        variation: variation-A
+        percentage:
+            ghfds: 0
+            vfdvdfscs: 0
         disable: false
     metadata:
-        gofeatureflag_createdDate: 2024-09-13T17:45:11.78432+02:00
+        betrgdfs: bgrwvsfda
+        gofeatureflag_createdDate: 2024-09-13T16:12:01.171Z
         gofeatureflag_description: ""
-        gofeatureflag_id: 7181e407-bd1c-436c-aff1-a2b9e3de8fde
-        gofeatureflag_lastUpdatedDate: 2024-09-13T15:44:57.875Z
+        gofeatureflag_id: cca6f71e-7a49-4c3b-9fcb-432008094899
+        gofeatureflag_lastUpdatedDate: 2024-09-16T18:28:14.773711+02:00
+        jreuythndbr: gerfsvd
     trackEvents: false
     disable: false
-    version: 0.0.1
-otot:
-    variations:
-        variation-A: fdsl
-        variation-B13sss: vefsldoj
-    targeting:
-        - name: Rule 1
-          query: lvsjhvls
-          variation: variation-B13sss
-          disable: false
-    defaultRule:
-        name: defaultRule
-        disable: false
-    metadata:
-        gofeatureflag_createdDate: 2024-09-12T20:27:42.276Z
-        gofeatureflag_description: ""
-        gofeatureflag_id: 941e8082-57c1-4c0b-843a-c47530c4d4cf
-        gofeatureflag_lastUpdatedDate: 2024-09-12T22:34:07.956589+02:00
-    trackEvents: false
-    disable: false
-    version: 0.0.1
-tgbadfr:
-    variations:
-        variation-A: 1.1
-        variation-B: 1.1
-    targeting: []
-    defaultRule:
-        name: defaultRule
-        variation: variation-A
-        disable: false
-    metadata:
-        gofeatureflag_createdDate: 2024-09-13T17:45:31.823125+02:00
-        gofeatureflag_description: ""
-        gofeatureflag_id: 67a4885e-dd74-4a55-b1f9-d8a0ff4350ce
-        gofeatureflag_lastUpdatedDate: 2024-09-13T15:45:27.887Z
-    trackEvents: false
-    disable: false
-    version: 0.0.1
+    version: 0.1.0
