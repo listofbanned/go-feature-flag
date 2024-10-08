@@ -6,7 +6,7 @@
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gofeatureflag.org/blog"/>
     <subtitle>GO Feature Flag Blog</subtitle>
-    <icon>https://gofeatureflag.org/img/favicon/gofeatureflag.svg</icon>
+    <icon>https://gofeatureflag.org/img/favicon/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[Changes to golang OpenFeature Integration]]></title>
         <id>https://gofeatureflag.org/blog/2024/08/14/changes-to-golang-openfeature-integration</id>
